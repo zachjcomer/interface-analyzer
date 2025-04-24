@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAnalyzer", "InterfaceAnalyzer\InterfaceAnalyzer.csproj", "{CAE79A27-7239-2728-3686-8B0DB53DF23D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAnalyzer.Test", "InterfaceAnalyzer.Test\InterfaceAnalyzer.Test.csproj", "{5E6A3019-8575-457D-9D00-380F9AF83527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAnalyzer.Pack", "InterfaceAnalyzer.Pack\InterfaceAnalyzer.Pack.csproj", "{88E29D9D-5D01-41D9-97D8-0BB4E3755747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Debug|x64.Build.0 = Debug|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Debug|x86.Build.0 = Debug|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Release|x64.ActiveCfg = Release|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Release|x64.Build.0 = Release|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Release|x86.ActiveCfg = Release|Any CPU
+		{CAE79A27-7239-2728-3686-8B0DB53DF23D}.Release|x86.Build.0 = Release|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Debug|x64.Build.0 = Debug|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Debug|x86.Build.0 = Debug|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x64.ActiveCfg = Release|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x64.Build.0 = Release|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x86.ActiveCfg = Release|Any CPU
+		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x86.Build.0 = Release|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x64.Build.0 = Debug|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x86.Build.0 = Debug|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x64.ActiveCfg = Release|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x64.Build.0 = Release|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x86.ActiveCfg = Release|Any CPU
+		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E143DCC-FDBD-4A33-A8A7-8295D176B358}
+	EndGlobalSection
+EndGlobal

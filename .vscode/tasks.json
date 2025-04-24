@@ -1,0 +1,11 @@
+{
+    "version":"2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Pack Analyzer",
+            "type": "shell",
+            "command": "sudo dotnet pack ${workspaceFolder}/InterfaceAnalyzer.Pack -c Release -o /local-nuget-feed",
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
