@@ -11,7 +11,8 @@
 		"vscode": {
 			"extensions": [
 				"ms-dotnettools.csdevkit",
-				"saoudrizwan.claude-dev"
+				"saoudrizwan.claude-dev",
+				"GitHub.vscode-github-actions"
 			]
 		}
 	},
@@ -21,5 +22,6 @@
 			"target": "/local-nuget-feed",
 			"type": "volume"
 		}
-	]
+	],
+	"remoteUser": "vscode"
 }
