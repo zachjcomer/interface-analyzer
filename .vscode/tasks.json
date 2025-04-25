@@ -4,7 +4,7 @@
         {
             "label": "Build and Pack Analyzer",
             "type": "shell",
-            "command": "sudo dotnet pack ${workspaceFolder}/InterfaceAnalyzer.Pack -c Release -o /local-nuget-feed",
+            "command": "dotnet pack ${workspaceFolder}/InterfaceAnalyzer/InterfaceAnalyzer -c Release -o /local-nuget-feed -v diag",
             "problemMatcher": "$msCompile"
         }
     ]

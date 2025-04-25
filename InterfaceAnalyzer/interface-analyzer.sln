@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAnalyzer", "Interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAnalyzer.Test", "InterfaceAnalyzer.Test\InterfaceAnalyzer.Test.csproj", "{5E6A3019-8575-457D-9D00-380F9AF83527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAnalyzer.Pack", "InterfaceAnalyzer.Pack\InterfaceAnalyzer.Pack.csproj", "{88E29D9D-5D01-41D9-97D8-0BB4E3755747}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,18 +41,6 @@ Global
 		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x64.Build.0 = Release|Any CPU
 		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x86.ActiveCfg = Release|Any CPU
 		{5E6A3019-8575-457D-9D00-380F9AF83527}.Release|x86.Build.0 = Release|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x64.Build.0 = Debug|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Debug|x86.Build.0 = Debug|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x64.ActiveCfg = Release|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x64.Build.0 = Release|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x86.ActiveCfg = Release|Any CPU
-		{88E29D9D-5D01-41D9-97D8-0BB4E3755747}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
