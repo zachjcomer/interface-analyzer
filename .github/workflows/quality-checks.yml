@@ -2,16 +2,20 @@ name: Quality Checks
 
 on:
     push:
-        branches: [ $default-branch ]
+        branches:
+            - main
 
 jobs:
     build:
         runs-on: ubuntu-latest
+
         env:
             SOLUTION_DIR: ./InterfaceAnalyzer
+
         defaults:
             run:
                 working-directory: ${{ env.SOLUTION_DIR }}
+
         steps:
             - uses: actions/checkout@v4.2.2
             - uses: actions/setup-dotnet@v4.3.1
