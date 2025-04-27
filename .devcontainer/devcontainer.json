@@ -12,7 +12,8 @@
 			"extensions": [
 				"ms-dotnettools.csdevkit",
 				"saoudrizwan.claude-dev",
-				"GitHub.vscode-github-actions"
+				"GitHub.vscode-github-actions",
+				"redhat.vscode-yaml"
 			]
 		}
 	},

@@ -1,0 +1,68 @@
+name: Pack and Publish
+
+on:
+  workflow_call:
+    inputs:
+      build-path:
+        required: true
+        type: string
+        description: "Path to the .csproj or .nuspec file to pack"
+      artifact-name:
+        description: "Name of the artifact to download"
+        required: false
+        type: string
+        default: release-build-${{ github.run_id }}
+      nuget-feed-url:
+        required: false
+        type: string
+        default: https://nuget.pkg.github.com/zachjcomer/index.json
+    # secrets:
+    #   GITHUB_TOKEN: # Secret for GitHub Packages (passed from caller)
+    #     required: false # Set to true if only publishing to GitHub Packages
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  package-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4.2.2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4.3.1
+      with:
+        dotnet-version: '9'
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.artifact-name }}
+        # path: ./downloaded-build
+
+    - name: Add NuGet source
+      run: |
+        # Extract owner from the URL (basic example, adjust if needed)
+        GITHUB_OWNER=$(echo "${{ inputs.nuget-feed-url }}" | sed 's|https://nuget.pkg.github.com/\(.*\)/index.json|\1|')
+        dotnet nuget add source ${{ inputs.nuget-feed-url }} \
+        --name github \
+        --username ${GITHUB_OWNER} \
+        --password ${{ secrets.GITHUB_TOKEN }} \
+        --store-password-in-clear-text
+
+    - name: Package project
+      run: >
+        dotnet pack ${{ inputs.build-path }}
+        -c Release 
+        --no-build 
+        -o ${{ github.workspace }}/artifacts
+
+    - name: Publish package
+      run: >
+        dotnet nuget push ${{ github.workspace }}/artifacts/*.nupkg
+        --source "github"
+        --api-key ${{ secrets.GITHUB_TOKEN }}
+        --skip-duplicate

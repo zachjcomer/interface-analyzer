@@ -1,0 +1,53 @@
+name: Test and Artifact
+
+on:
+    workflow_call:
+        inputs:
+            build-path:
+                description: "Path to the solution or project"
+                required: false
+                type: string
+                default: '**/*.sln'
+            artifact-name:
+                description: "Name of the artifact to upload"
+                required: false
+                type: string
+                default: release-build-${{ github.run_id }}
+
+permissions:
+    contents: read
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        defaults:
+            run:
+                working-directory: ${{ inputs.build-path }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4.2.2
+
+            - name: Install .NET SDK
+              uses: actions/setup-dotnet@v4.3.1
+              with:
+                dotnet-version: '9'
+
+            - name: Restore Project
+              run: dotnet restore
+
+            - name: Build Project
+              run: dotnet build -c Release --no-restore
+
+            - name: Test Project
+              run: dotnet test -c Release --no-build
+
+            - name: Upload Build Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: ${{ inputs.artifact-name }}
+                path: ${{ inputs.build-path }}/bin/Release/netstandard2.0
+                retention-days: 2
+
+        
