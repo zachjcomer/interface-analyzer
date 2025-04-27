@@ -13,7 +13,7 @@ jobs:
         name: Test Project and Upload Artifact
         uses: ./.github/workflows/test-and-artifact-job.yml
         with:
-            build-path: ./InterfaceAnalyzer
+            build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
 
     publish:
         name: Publish as NuGet Package
