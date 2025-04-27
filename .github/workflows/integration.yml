@@ -23,6 +23,6 @@ jobs:
             packages: write
         uses: ./.github/workflows/publish-job.yml
         with:
-            build-path: ./InterfaceAnalyzer
+            build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
         
 
