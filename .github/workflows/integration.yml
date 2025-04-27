@@ -13,13 +13,16 @@ jobs:
         name: Test Project and Upload Artifact
         uses: ./.github/workflows/test-and-artifact-job.yml
         with:
-            build-path: $SOLUTION_DIR    
+            build-path: ${{ env.SOLUTION_DIR }}  
 
     publish:
         name: Publish as NuGet Package
         needs: test_and_artifact
+        permissions:
+            contents: read
+            packages: write
         uses: ./.github/workflows/publish-job.yml
         with:
-            build-path: $SOLUTION_DIR
+            build-path: ${{ env.SOLUTION_DIR }}
         
 
