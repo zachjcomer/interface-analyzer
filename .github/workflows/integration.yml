@@ -15,9 +15,9 @@ jobs:
       contents: read
     uses: ./.github/workflows/test-and-artifact-job.yml
     with:
-      build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
+      build-path: ./zachjcomer.InterfaceAnalyzer/zachjcomer.InterfaceAnalyzer
       artifact-name: release-build-${{ github.run_id }}
-      artifact-path: ./InterfaceAnalyzer/InterfaceAnalyzer/bin/Release/netstandard2.0
+      artifact-path: ./zachjcomer.InterfaceAnalyzer/zachjcomer.InterfaceAnalyzer/bin/Release/netstandard2.0
 
   publish:
     name: Publish as NuGet Package
@@ -27,9 +27,9 @@ jobs:
       packages: write
     uses: ./.github/workflows/publish-job.yml
     with:
-      build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
+      build-path: ./zachjcomer.InterfaceAnalyzer/zachjcomer.InterfaceAnalyzer
       artifact-name: release-build-${{ github.run_id }}
-      artifact-path: ./InterfaceAnalyzer/InterfaceAnalyzer/bin/Release/netstandard2.0
+      artifact-path: ./zachjcomer.InterfaceAnalyzer/zachjcomer.InterfaceAnalyzer/bin/Release/netstandard2.0
       nuget-feed-url: https://nuget.pkg.github.com/zachjcomer/index.json
       nuget-feed-owner: zachjcomer
         

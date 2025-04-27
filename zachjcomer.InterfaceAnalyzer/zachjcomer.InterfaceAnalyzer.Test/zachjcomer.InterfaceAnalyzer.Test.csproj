@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InterfaceAnalyzer\InterfaceAnalyzer.csproj" />
+    <ProjectReference Include="..\zachjcomer.InterfaceAnalyzer\zachjcomer.InterfaceAnalyzer.csproj" />
   </ItemGroup>
 
 </Project>

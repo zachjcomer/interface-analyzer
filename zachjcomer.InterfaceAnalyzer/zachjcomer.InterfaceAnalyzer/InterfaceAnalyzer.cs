@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace InterfaceAnalyzer
+namespace zachjcomer.InterfaceAnalyzer
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class InterfaceAnalyzer : DiagnosticAnalyzer

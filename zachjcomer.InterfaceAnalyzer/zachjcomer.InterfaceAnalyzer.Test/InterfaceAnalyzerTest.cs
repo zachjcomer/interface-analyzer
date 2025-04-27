@@ -1,6 +1,6 @@
-﻿using VerifyCS = Microsoft.CodeAnalysis.CSharp.Testing.NUnit.AnalyzerVerifier<InterfaceAnalyzer.InterfaceAnalyzer>;
+﻿using VerifyCS = Microsoft.CodeAnalysis.CSharp.Testing.NUnit.AnalyzerVerifier<zachjcomer.InterfaceAnalyzer.InterfaceAnalyzer>;
 
-namespace InterfaceAnalyzer.Test;
+namespace zachjcomer.InterfaceAnalyzer.Test;
 
 public class Tests
 {
