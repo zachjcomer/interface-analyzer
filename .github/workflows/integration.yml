@@ -1,28 +1,36 @@
 name: Integration
 
 on:
-    push:
-        branches:
-            - main
-
-# env:
-#     SOLUTION_DIR: ./InterfaceAnalyzer
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
-    test_and_artifact:
-        name: Test Project and Upload Artifact
-        uses: ./.github/workflows/test-and-artifact-job.yml
-        with:
-            build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
+  test_and_artifact:
+    name: Test Project and Upload Artifact
+    permissions:
+      contents: read
+    uses: ./.github/workflows/test-and-artifact-job.yml
+    with:
+      build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
+      artifact-name: release-build-${{ github.run_id }}
+      artifact-path: ./InterfaceAnalyzer/InterfaceAnalyzer/bin/Release/netstandard2.0
 
-    publish:
-        name: Publish as NuGet Package
-        needs: test_and_artifact
-        permissions:
-            contents: read
-            packages: write
-        uses: ./.github/workflows/publish-job.yml
-        with:
-            build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
+  publish:
+    name: Publish as NuGet Package
+    needs: test_and_artifact
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/publish-job.yml
+    with:
+      build-path: ./InterfaceAnalyzer/InterfaceAnalyzer
+      artifact-name: release-build-${{ github.run_id }}
+      artifact-path: ./InterfaceAnalyzer/InterfaceAnalyzer/bin/Release/netstandard2.0
+      nuget-feed-url: https://nuget.pkg.github.com/zachjcomer/index.json
+      nuget-feed-owner: zachjcomer
         
 
