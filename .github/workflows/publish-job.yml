@@ -41,11 +41,10 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: ${{ inputs.artifact-name }}
-        # path: ./downloaded-build
+        path: ${{ inputs.build-path }}/bin/Release/netstandard2.0
 
     - name: Add NuGet source
       run: |
-        # Extract owner from the URL (basic example, adjust if needed)
         GITHUB_OWNER=$(echo "${{ inputs.nuget-feed-url }}" | sed 's|https://nuget.pkg.github.com/\(.*\)/index.json|\1|')
         dotnet nuget add source ${{ inputs.nuget-feed-url }} \
         --name github \
