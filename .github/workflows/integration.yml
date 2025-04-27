@@ -5,15 +5,15 @@ on:
         branches:
             - main
 
-env:
-    SOLUTION_DIR: ./InterfaceAnalyzer
+# env:
+#     SOLUTION_DIR: ./InterfaceAnalyzer
 
 jobs:
     test_and_artifact:
         name: Test Project and Upload Artifact
         uses: ./.github/workflows/test-and-artifact-job.yml
         with:
-            build-path: $SOLUTION_DIR
+            build-path: ./InterfaceAnalyzer
 
     publish:
         name: Publish as NuGet Package
@@ -23,6 +23,6 @@ jobs:
             packages: write
         uses: ./.github/workflows/publish-job.yml
         with:
-            build-path: $SOLUTION_DIR
+            build-path: ./InterfaceAnalyzer
         
 

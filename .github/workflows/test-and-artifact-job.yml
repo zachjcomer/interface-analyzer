@@ -23,7 +23,7 @@ jobs:
 
         defaults:
             run:
-                working-directory: ${{ inputs.build-path }}
+              working-directory: ${{ inputs.build-path }}
 
         steps:
             - name: Checkout
